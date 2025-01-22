@@ -1,0 +1,111 @@
+Home Page (/)
+Overview of the platform, benefits, and features.
+Call-to-action (CTA) for signing up or logging in.
+Testimonials and featured courses.
+Buttons to explore tutorials.
+----------------------------------------------------------------------------------------------------------------------
+Sign Up Page (/signup)
+Form to register new users (username, email, password, etc.).
+Integration with authentication API.
+----------------------------------------------------------------------------------------------------------------------
+Login Page (/login)
+User login form.
+Option to reset the password.
+OAuth options (Google, Facebook, etc., if needed).
+----------------------------------------------------------------------------------------------------------------------
+Dashboard (/dashboard)
+Displays user progress, enrolled courses, and recommended tutorials.
+Navigation to continue learning or take a quiz.
+----------------------------------------------------------------------------------------------------------------------
+Language Learning Page (/learn/:languageId)
+Section-based structure:
+Tutorial Viewer: Embedded videos, text, or interactive content for each module.
+Question Area: Dynamic questions with relevant images or prompts.
+Code Editor: Integrated code editor for real-time coding practice (e.g., using CodeMirror or Monaco Editor).
+Output Area: Real-time output display below the editor.
+--------------------------------------------------------------------------------------------------------------------
+Quizzes and Assessments (/quiz/:languageId)
+Timed or untimed quizzes based on tutorials.
+Multiple-choice questions, drag-and-drop, and fill-in-the-code questions.
+Profile Page (/profile)
+---------------------------------------------------------------------------------------------------------------------
+User details (profile picture, bio, email, etc.).
+Progress tracker and badges earned.
+Option to edit profile information.
+----------------------------------------------------------------------------------------------------------------------
+Settings Page (/settings)
+Options to change password, email preferences, and delete account.
+Dark mode toggle.
+----------------------------------------------------------------------------------------------------------------------
+Course Marketplace (/courses)
+List of available courses with a filter/search option.
+Course preview and enrollment options.
+----------------------------------------------------------------------------------------------------------------------
+Course Details Page (/courses/:courseId)
+Displays detailed information about a specific course:
+Course description, prerequisites, and objectives.
+Curriculum breakdown (module list with progress indicators).
+Ratings and reviews from other learners.
+Button to enroll or continue learning.
+----------------------------------------------------------------------------------------------------------------------
+Community Forum Page (/forum)
+A platform for learners to ask questions and share knowledge.
+Categorized by language, course, or topic.
+Features like upvoting answers, commenting, and bookmarking discussions.
+----------------------------------------------------------------------------------------------------------------------
+Leaderboard and Achievements Page (/leaderboard)
+Displays top learners based on progress, quiz scores, or coding challenges.
+Showcases achievements like badges and certifications earned.
+----------------------------------------------------------------------------------------------------------------------
+Coding Challenges Page (/challenges)
+Daily or weekly coding problems to practice skills.
+Difficulty levels (easy, medium, hard) and categories (e.g., algorithms, web development).
+Timer and leaderboard specific to challenges.
+----------------------------------------------------------------------------------------------------------------------
+Certifications Page (/certifications)
+Displays certificates earned by completing courses or quizzes.
+Option to download or share certificates on LinkedIn.
+----------------------------------------------------------------------------------------------------------------------
+Subscription Plans Page (/pricing)
+Displays available subscription tiers (if the platform has paid options).
+Comparison table of features for free and paid plans.
+Secure checkout for purchasing subscriptions.
+----------------------------------------------------------------------------------------------------------------------
+Project Showcase Page (/projects)
+A space where learners can upload and share their projects.
+Allows users to view, comment, and give feedback on projects.
+----------------------------------------------------------------------------------------------------------------------
+Tutorial Feedback Page (/feedback)
+Enables users to provide feedback on tutorials or courses.
+Options to rate and suggest improvements.
+----------------------------------------------------------------------------------------------------------------------
+Notifications Page (/notifications)
+Central hub for all user notifications:
+Course updates, reminders, and achievements.
+Platform announcements or live session alerts.
+----------------------------------------------------------------------------------------------------------------------
+Terms and Privacy Page (/terms, /privacy)
+Dedicated pages for legal information.
+Includes Terms of Service and Privacy Policy.
+----------------------------------------------------------------------------------------------------------------------
+Progress Report Page (/progress)
+Detailed progress breakdown:
+Time spent on courses.
+Completed modules and quizzes.
+Graphical visualizations (e.g., progress bars, pie charts).
+Weekly and monthly progress comparisons.
+----------------------------------------------------------------------------------------------------------------------
+Multiplayer Coding Games (/games)
+Fun coding games designed to teach concepts:
+Code challenges against other users in real-time.
+Games like "debug the code," "code racer," or "build the output."
+----------------------------------------------------------------------------------------------------------------------
+Virtual Mentor Page (/mentor)
+A virtual assistant or chatbot for answering questions, providing hints, or guiding users through challenges.
+Integrated with AI to help debug code or explain concepts.
+----------------------------------------------------------------------------------------------------------------------
+Practice Mode Page (/practice)
+A space for freeform practice:
+Users can experiment with coding without structured tutorials.
+Option to save practice code for later reference.
+----------------------------------------------------------------------------------------------------------------------
