@@ -69,11 +69,15 @@ const Register = () => {
         navigate("/home");
       }
     } catch (error) {
+      console.error('Registration error:', error);
       if (error.response) {
+        console.error('Error response:', error.response.data);
         setError(error.response.data.message || 'Registration failed');
       } else if (error.request) {
+        console.error('Error request:', error.request);
         setError('Network error. Please try again.');
       } else {
+        console.error('Error:', error.message);
         setError('An error occurred. Please try again.');
       }
     }

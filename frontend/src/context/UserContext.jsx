@@ -7,10 +7,14 @@ export const UserProvider = ({ children }) => {
 
   const login = (userData) => {
     setUser(userData);
+    // Store user data in localStorage for persistence
+    localStorage.setItem('user', JSON.stringify(userData));
   };
 
   const logout = () => {
     setUser(null);
+    // Remove user data from localStorage
+    localStorage.removeItem('user');
   };
 
   return (
