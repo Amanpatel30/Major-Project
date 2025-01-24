@@ -1,152 +1,116 @@
-﻿# User Authentication System
+﻿# Full Stack Authentication Project
 
-A full-stack authentication system built with MERN stack (MongoDB, Express.js, React, Node.js) featuring a modern UI and secure backend implementation.
+A modern full-stack application demonstrating user authentication using the MERN stack (MongoDB, Express.js, React.js, Node.js).
 
+## Features
 
-## 🌟 Project Overview
+- User Registration with email and password
+- User Login with JWT authentication
+- Protected Routes
+- Responsive Design
+- Modern UI with Tailwind CSS
+- Form validation
+- Error handling
+- Persistent login state
 
-This project consists of two main parts:
-- A React frontend built with Vite and Tailwind CSS
-- A Node.js/Express backend with MongoDB integration
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB
-- npm or yarn package manager
-
-### Installation Steps
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Amanpatel30/Major-Project.git
-cd Major-Project
-```
-
-2. Setup Backend:
-```bash
-cd backend
-npm install
-cp .env.example .env  # Create and configure your .env file
-npm run dev
-```
-
-3. Setup Frontend:
-```bash
-cd frontend
-npm install
-cp .env.example .env  # Create and configure your .env file
-npm run dev
-```
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js with Vite
-- Tailwind CSS for styling
 - React Router for navigation
-- Context API for state management
+- Tailwind CSS for styling
 - Axios for API requests
+- Context API for state management
+- Remix Icons for UI icons
 
 ### Backend
-- Node.js & Express.js
+- Node.js
+- Express.js
 - MongoDB with Mongoose
 - JWT for authentication
 - Bcrypt for password hashing
-- Express Validator for input validation
+- CORS for cross-origin requests
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-├── frontend/
+├── frontend/                # Frontend application
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   ├── App.jsx
-│   │   └── main.jsx
+│   │   ├── pages/          # Page components
+│   │   ├── context/        # Context providers
+│   │   └── ...
 │   ├── package.json
-│   └── vite.config.js
+│   └── README.md
 │
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
+├── backend/                 # Backend application
+│   ├── controllers/        # Request handlers
+│   ├── models/            # Database models
+│   ├── routes/            # API routes
+│   ├── package.json
+│   └── README.md
+│
+└── README.md               # Main README file
 ```
 
-## ✨ Features
+## Getting Started
 
-- User Authentication
-  - Register new account
-  - Login with existing account
-  - Password hashing for security
-  - JWT token based authentication
-
-- User Management
-  - Profile viewing and editing
-  - Secure password reset
-  - Email verification
-
-- Security Features
-  - Protected routes
-  - Input validation
-  - Error handling
-  - Session management
-
-## 🔒 Environment Variables
-
-### Backend (.env)
-```
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
+1. Clone the repository
+```bash
+git clone <repository-url>
 ```
 
-### Frontend (.env)
+2. Install MongoDB Community Server
+- Download from: https://www.mongodb.com/try/download/community
+- Install with default settings
+- Add MongoDB to system PATH
+
+3. Start MongoDB
+```bash
+mongod
 ```
-VITE_API_URL=http://localhost:5000
-```
 
-## 🚀 API Endpoints
-
-### Auth Routes
-- POST /api/auth/register - Register new user
-- POST /api/auth/login - Login user
-- GET /api/auth/profile - Get user profile
-- PUT /api/auth/profile - Update user profile
-
-## 💻 Development
-
-To start development servers:
-
-Backend:
+4. Setup Backend
 ```bash
 cd backend
+npm install
+npm start
+```
+
+5. Setup Frontend
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-Frontend:
-```bash
-cd frontend
-npm run dev
+6. Create .env files:
+
+Backend (.env):
+```
+PORT=4000
+MONGODB_URI=mongodb://localhost:27017/majorproject
+JWT_SECRET=your_jwt_secret_key_here
 ```
 
-## 🧪 Testing
-
-```bash
-# Run backend tests
-cd backend
-npm test
-
-# Run frontend tests
-cd frontend
-npm test
+Frontend (.env):
+```
+VITE_BASE_URL=http://localhost:4000/api
 ```
 
-## 📝 Contributing
+## Available Scripts
+
+In the backend directory:
+```bash
+npm start     # Start the server
+```
+
+In the frontend directory:
+```bash
+npm run dev   # Start development server
+npm run build # Build for production
+```
+
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -154,17 +118,6 @@ npm test
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📜 License
+## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Authors
-
-- Aman Patel - Initial work
-
-## 🙏 Acknowledgments
-
-- React.js community
-- Node.js community
-- MongoDB team
-- All contributors to this project
+This project is licensed under the MIT License.

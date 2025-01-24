@@ -1,122 +1,129 @@
-# User Authentication API Backend
+# Backend - Authentication System
 
-A robust Node.js/Express backend API for user authentication with MongoDB database integration.
+The backend API for our authentication system built with Node.js, Express, and MongoDB.
 
 ## Features
 
-- User registration with data validation
-- Password hashing using bcryptjs
-- JWT-based authentication
+- User registration and login
+- JWT authentication
+- Password hashing with bcrypt
 - MongoDB database integration
-- Error handling and validation
-- CORS enabled for frontend integration
+- Error handling middleware
+- CORS enabled
+- Environment variable configuration
+- MongoDB connection with retry logic
 
-## Prerequisites
+## Tech Stack
 
-- Node.js (v14 or higher)
-- MongoDB installed and running locally
-- npm or yarn package manager
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT for authentication
+- Bcrypt for password hashing
+- CORS for cross-origin requests
+- Dotenv for environment variables
 
-## Installation
+## Project Structure
 
-1. Clone the repository
-2. Navigate to the backend directory:
-```bash
-cd backend
+```
+├── controllers/        # Request handlers
+│   └── userController.js  # User authentication logic
+├── models/            # Database models
+│   └── userModel.js   # User schema and model
+├── routes/            # API routes
+│   └── userRoutes.js  # User-related routes
+├── server.js          # Main application file
+└── .env              # Environment variables
 ```
 
-3. Install dependencies:
+## API Endpoints
+
+### Authentication Routes
+- POST /api/register
+  - Register a new user
+  - Required fields: firstname, lastname, email, password
+  - Returns: User data with JWT token
+
+- POST /api/login
+  - Login existing user
+  - Required fields: email, password
+  - Returns: User data with JWT token
+
+## Getting Started
+
+1. Install MongoDB Community Server
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Create a `.env` file in the root directory with the following variables:
+3. Create a .env file in the root directory:
 ```
 PORT=4000
 MONGODB_URI=mongodb://localhost:27017/majorproject
 JWT_SECRET=your_jwt_secret_key_here
 ```
 
-## Project Structure
-
-```
-backend/
-├── controllers/
-│   └── userController.js    # User-related controller logic
-├── models/
-│   └── userModel.js        # User MongoDB schema
-├── routes/
-│   └── userRoutes.js       # API route definitions
-├── .env                    # Environment variables
-├── package.json           # Project dependencies
-└── server.js             # Main application file
-```
-
-## API Endpoints
-
-### User Registration
-- **POST** `/api/register`
-- **Body:**
-```json
-{
-  "firstname": "John",
-  "lastname": "Doe",
-  "email": "john@example.com",
-  "password": "password123"
-}
-```
-- **Response:**
-```json
-{
-  "_id": "user_id",
-  "firstname": "John",
-  "lastname": "Doe",
-  "email": "john@example.com",
-  "token": "jwt_token"
-}
-```
-
-## Running the Server
-
-### Development mode:
+4. Start MongoDB:
 ```bash
-npm run dev
+mongod
 ```
 
-### Production mode:
+5. Start the server:
 ```bash
 npm start
 ```
 
-## Dependencies
+## Environment Variables
 
-- `express`: Web framework
-- `mongoose`: MongoDB object modeling
-- `bcryptjs`: Password hashing
-- `jsonwebtoken`: JWT authentication
-- `dotenv`: Environment variables
-- `cors`: CORS middleware
+| Variable | Description | Default |
+|----------|-------------|---------|
+| PORT | Server port | 4000 |
+| MONGODB_URI | MongoDB connection string | mongodb://localhost:27017/majorproject |
+| JWT_SECRET | Secret key for JWT | Required |
+
+## Database Schema
+
+### User Model
+```javascript
+{
+  firstname: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lastname: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+    lowercase: true
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 6
+  }
+}
+```
 
 ## Error Handling
 
-The API includes comprehensive error handling for:
-- Invalid requests
-- Database errors
-- Authentication errors
+The API implements comprehensive error handling for:
 - Validation errors
+- Authentication errors
+- Database errors
+- Server errors
 
-## Security Features
-
-- Password hashing using bcrypt
-- JWT token authentication
-- Input validation
-- CORS protection
-- Environment variable security
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request 
+All errors are returned in a consistent format:
+```javascript
+{
+  message: "Error message",
+  details: "Additional error details" // optional
+}
+``` 

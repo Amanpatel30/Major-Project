@@ -1,15 +1,49 @@
-# Frontend - User Authentication App
+# Frontend - Authentication System
 
-This is a React-based frontend application for user authentication.
+The frontend of our authentication system built with React.js, Vite, and Tailwind CSS.
 
-## Setup
+## Features
+
+- Modern and responsive UI
+- Form validation
+- Protected routes
+- User context for state management
+- Persistent login state
+- Error handling
+- Loading states
+- Password visibility toggle
+
+## Tech Stack
+
+- React.js 18+ with Vite
+- React Router v6 for routing
+- Tailwind CSS for styling
+- Axios for API requests
+- Context API for state management
+- Remix Icons for UI elements
+
+## Project Structure
+
+```
+src/
+├── pages/          # Page components
+│   ├── Home.jsx    # Home page
+│   ├── Login.jsx   # Login page
+│   └── Register.jsx # Registration page
+├── context/        # Context providers
+│   └── UserContext.jsx # User authentication context
+├── App.jsx         # Main app component
+└── main.jsx       # Entry point
+```
+
+## Getting Started
 
 1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Create a `.env` file in the root directory with:
+2. Create a .env file in the root directory:
 ```
 VITE_BASE_URL=http://localhost:4000/api
 ```
@@ -19,52 +53,48 @@ VITE_BASE_URL=http://localhost:4000/api
 npm run dev
 ```
 
-## Features
-- User Registration with form validation
-- Modern UI with Tailwind CSS
-- Responsive design
-- Password visibility toggle
-- Form validation
-- Error handling
+## Available Scripts
 
-## Technologies Used
-- **React**: Frontend library
-- **Vite**: Build tool and development server
-- **Tailwind CSS**: Utility-first CSS framework
-- **React Router**: Client-side routing
-- **Axios**: HTTP client
-- **Context API**: State management
-- **Remix Icons**: Icon library
-
-## Features in Detail
-
-### User Registration
-- Form validation for all fields
-- Password strength requirements
-- Password matching validation
-- Error message display
-- Success feedback
-
-### UI Components
-- Responsive design
-- Dark theme
-- Form inputs with labels
-- Password visibility toggle
-- Loading states
-- Error messages
-- Success notifications
-
-### Authentication
-- Protected routes
-- User context
-- Token management
-- Session handling
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+```
 
 ## Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | VITE_BASE_URL | Backend API URL | http://localhost:4000/api |
+
+## Pages
+
+### Home (/)
+- Landing page
+- Shows login/register buttons for non-authenticated users
+- Shows welcome message and logout button for authenticated users
+
+### Register (/register)
+- User registration form
+- Form validation
+- Error handling
+- Password visibility toggle
+- Redirects to home on successful registration
+
+### Login (/login)
+- User login form
+- Form validation
+- Error handling
+- Password visibility toggle
+- Redirects to home on successful login
+
+## State Management
+
+User authentication state is managed through the UserContext, which provides:
+- Current user data
+- Login function
+- Logout function
+- Persistent state through localStorage
 
 ## Browser Support
 
