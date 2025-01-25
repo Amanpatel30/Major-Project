@@ -81,6 +81,17 @@ exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
 
+    // Add validation for required fields
+    if (!email || !password) {
+      return res.status(400).json({
+        message: 'All fields are required',
+        missing: {
+          email: !email,
+          password: !password
+        }
+      });
+    }
+
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(401).json({ message: 'Invalid email or password' });
@@ -91,14 +102,31 @@ exports.loginUser = async (req, res) => {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
+    // Generate token and set cookie
+    const token = generateToken(user._id);
+    res.cookie('token', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+    });
+
     res.status(200).json({
       _id: user._id,
       firstname: user.firstname,
       lastname: user.lastname,
       email: user.email,
-      token: generateToken(user._id),
+      token: token,
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error('Login error:', error);
+    res.status(500).json({ 
+      message: 'Server error during login',
+      details: error.message 
+    });
   }
+};
+
+exports.logoutUser = (req, res) => {
+  res.clearCookie('token');
+  res.status(200).json({ message: 'Logout successful' });
 };

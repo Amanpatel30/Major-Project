@@ -1,28 +1,28 @@
-# Frontend - Authentication System
+# 🌐 Frontend - Authentication System
 
 The frontend of our authentication system built with React.js, Vite, and Tailwind CSS.
 
-## Features
+## ✨ Features
 
-- Modern and responsive UI
-- Form validation
-- Protected routes
-- User context for state management
-- Persistent login state
-- Error handling
-- Loading states
-- Password visibility toggle
+- 🎨 Modern and responsive UI
+- ✅ Form validation
+- 🛡️ Protected routes
+- 📦 User context for state management
+- 💾 Persistent login state
+- ⚠️ Error handling
+- ⌛ Loading states
+- 👁️ Password visibility toggle
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- React.js 18+ with Vite
-- React Router v6 for routing
-- Tailwind CSS for styling
-- Axios for API requests
-- Context API for state management
-- Remix Icons for UI elements
+- ⚛️ React.js 18+ with Vite
+- 🔄 React Router v6 for routing
+- 🎨 Tailwind CSS for styling
+- 🔌 Axios for API requests
+- 📦 Context API for state management
+- 🎯 Remix Icons for UI elements
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 src/
@@ -36,7 +36,7 @@ src/
 └── main.jsx       # Entry point
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Install dependencies:
 ```bash
@@ -53,7 +53,7 @@ VITE_BASE_URL=http://localhost:4000/api
 npm run dev
 ```
 
-## Available Scripts
+## 📜 Available Scripts
 
 ```bash
 npm run dev      # Start development server
@@ -61,49 +61,49 @@ npm run build    # Build for production
 npm run preview  # Preview production build
 ```
 
-## Environment Variables
+## ⚙️ Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | VITE_BASE_URL | Backend API URL | http://localhost:4000/api |
 
-## Pages
+## 📄 Pages
 
-### Home (/)
+### 🏠 Home (/)
 - Landing page
 - Shows login/register buttons for non-authenticated users
 - Shows welcome message and logout button for authenticated users
 
-### Register (/register)
+### 📝 Register (/register)
 - User registration form
 - Form validation
 - Error handling
 - Password visibility toggle
 - Redirects to home on successful registration
 
-### Login (/login)
+### 🔑 Login (/login)
 - User login form
 - Form validation
 - Error handling
 - Password visibility toggle
 - Redirects to home on successful login
 
-## State Management
+## 📦 State Management
 
 User authentication state is managed through the UserContext, which provides:
-- Current user data
-- Login function
-- Logout function
-- Persistent state through localStorage
+- 👤 Current user data
+- 🔑 Login function
+- 🚪 Logout function
+- 💾 Persistent state through localStorage
 
-## Browser Support
+## 🌐 Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch
@@ -111,7 +111,7 @@ User authentication state is managed through the UserContext, which provides:
 4. Push to the branch
 5. Create a new Pull Request
 
-## Development Guidelines
+## 👨‍💻 Development Guidelines
 
 - Follow ESLint configuration
 - Use functional components
@@ -119,20 +119,24 @@ User authentication state is managed through the UserContext, which provides:
 - Write clean, documented code
 - Follow the existing project structure
 
-## Troubleshooting
+## ❓ Troubleshooting
 
 ### Common Issues
 
-1. **API Connection Error**
+1. **🔌 API Connection Error**
    - Verify backend server is running
    - Check VITE_BASE_URL in .env
    - Ensure CORS is enabled on backend
 
-2. **Build Issues**
+2. **🏗️ Build Issues**
    - Clear npm cache
    - Delete node_modules and reinstall
    - Check for dependency conflicts
 
-## License
+## 📄 License
 
 This project is licensed under the ISC License.
+
+## 👨‍💻 Author
+
+Created with ❤️ by **Aman Patel**
