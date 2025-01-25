@@ -56,7 +56,7 @@ A modern full-stack application demonstrating user authentication using the MERN
 
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/Amanpatel30/Major-Project.git
 ```
 
 2. Install MongoDB Community Server
